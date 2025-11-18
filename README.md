@@ -1,11 +1,11 @@
 # AUTOMATIC-LED-CONTROL-USING-IR-SENSOR
 ##  AIM
-To design and implement a system using the *STM32 microcontroller* where an LED automatically turns ON or OFF based on the input from an *IR sensor*.
+To design and implement a system using the **STM32 microcontroller** where an LED automatically turns ON or OFF based on the input from an **IR sensor**.
 
 ---
 
 ##  Components Required
-- STM32 Nucleo or Discovery Board (e.g., *Nucleo-G071RB*)
+- STM32 Nucleo or Discovery Board (e.g., **Nucleo-G071RB**)
 - IR Sensor Module
 - LED (5mm Green or any color)
 - Jumper wires
@@ -14,61 +14,64 @@ To design and implement a system using the *STM32 microcontroller* where an LED 
 ---
 
 ##  Theory
-An *IR sensor* detects the presence of an object by emitting and receiving infrared light.
+An **IR sensor** detects the presence of an object by emitting and receiving infrared light.
 
 ### IR Sensor Behavior
-- When an *object is detected, the IR sensor output goes **LOW (0V)*.
-- When *no object is detected, the output stays **HIGH (3.3V)*.
+- When an **object is detected**, the IR sensor output goes **LOW (0V)**.
+- When **no object is detected**, the output stays **HIGH (3.3V)**.
 
 ### Microcontroller Response
-- If *IR output = LOW* → *LED ON*
-- If *IR output = HIGH* → *LED OFF*
-### *Procedure*
+- If **IR output = LOW** → **LED ON**
+- If **IR output = HIGH** → **LED OFF**
+### **Procedure**
 
-1. Open *STM32CubeIDE*.
-<img width="1902" height="1199" alt="Screenshot 2025-10-29 101050" src="https://github.com/user-attachments/assets/084b5b82-6094-4963-9788-0210caff6dc7" />
+1. Open **STM32CubeIDE**.
+   <img width="1920" height="1200" alt="Screenshot (125)" src="https://github.com/user-attachments/assets/4d54d0ec-19de-4aee-95a3-e1bd895b6b1a" />
 
-2. Click *File → New STM32 Project*.
-   <img width="940" height="555" alt="image" src="https://github.com/user-attachments/assets/de7a7760-2692-4cac-a780-1087e5d6df2d" />
 
-3. Select the *target microcontroller* or board and click *Next*.
-  <img width="940" height="558" alt="image" src="https://github.com/user-attachments/assets/6e1731c2-18ab-4de7-8688-5ca8406f7d2a" />
+2. Click **File → New STM32 Project**.
+   <img width="1080" height="608" alt="image" src="https://github.com/user-attachments/assets/a5799efb-57e1-42b8-ba46-b09f32d86fcb" />
+<img width="1080" height="608" alt="image" src="https://github.com/user-attachments/assets/edf33429-8eea-4857-a991-c2d7706fc787" />
+
+3. Select the **target microcontroller** or board and click **Next**.
+   <img width="1110" height="624" alt="image" src="https://github.com/user-attachments/assets/f93d88b6-cd7f-49db-84de-351f9b116488" />
+
 
 
 4. Name the project.
-  <img width="940" height="915" alt="image" src="https://github.com/user-attachments/assets/4f8e94a0-6705-4d0d-81dc-1fbf5423e924" />
+   <img width="533" height="588" alt="image" src="https://github.com/user-attachments/assets/63de2bab-69d4-4cb9-8db6-1b57adff9878" />
 
-5. The corresponding .ioc file will be generated automatically.
-  <img width="940" height="553" alt="image" src="https://github.com/user-attachments/assets/7b998bd6-b6ba-4319-92a6-d03bb01f1eaf" />
+5. The corresponding `.ioc` file will be generated automatically.
+  <img width="1080" height="608" alt="image" src="https://github.com/user-attachments/assets/8900847c-6745-43e2-9ecf-2e66877fdc49" />
 
-6. Configure the pins as *GPIO (Input/Output), **USART*, etc. as needed.
-   <img width="940" height="553" alt="image" src="https://github.com/user-attachments/assets/44dfe329-4d47-4f4c-8531-996cddff9baa" />
+6. Configure the pins as **GPIO (Input/Output)**, **USART**, etc. as needed.
+   <img width="1080" height="608" alt="image" src="https://github.com/user-attachments/assets/acc4f1c4-5e33-431b-8a76-3b102016baa6" />
+<img width="1110" height="624" alt="image" src="https://github.com/user-attachments/assets/b7abcd80-797d-451f-a7c3-23f303822423" />
 
-
-7. Save the configuration (Ctrl + S) – the base C program will be generated automatically.
-  <img width="940" height="558" alt="image" src="https://github.com/user-attachments/assets/8cb090e8-fe2b-4515-8ebf-a3463a9e5e73" />
-
+7. Save the configuration (`Ctrl + S`) – the base C program will be generated automatically.
+   <img width="1080" height="608" alt="image" src="https://github.com/user-attachments/assets/dbf4b205-5db9-4e9b-8150-94f441c8b116" />
  
 8. Edit the generated main program as required.
-   <img width="940" height="556" alt="image" src="https://github.com/user-attachments/assets/f347bb52-f64e-4a99-8f7d-9ca0b0b4cfd7" />
+   <img width="1110" height="624" alt="image" src="https://github.com/user-attachments/assets/05b39060-35d6-420d-9f4d-8721439bd82f" />
+<img width="1104" height="621" alt="image" src="https://github.com/user-attachments/assets/2ec55709-a45f-4e6e-8738-6aa94138eab1" />
 
-9. Click *Project → Build All*.
-   <img width="940" height="555" alt="image" src="https://github.com/user-attachments/assets/e5290cfd-6e43-4146-8275-c484745383b9" />
+9. Click **Project → Build All**.
+    <img width="1080" height="608" alt="image" src="https://github.com/user-attachments/assets/264cd0a8-3e96-4668-822e-838ecfafc527" />
 
-10. Link the *HEX file* using the post-build process.
-    <img width="940" height="426" alt="image" src="https://github.com/user-attachments/assets/56bab4ed-0b81-4b4b-a64c-57067baf3d28" />
+10. Link the **HEX file** using the post-build process.
+    <img width="1053" height="465" alt="image" src="https://github.com/user-attachments/assets/478187a0-0ee6-4c50-9cac-c3b5ee18521b" />
 
-11. Click *Debug* and connect the *STM Nucleo Board*.
-   <img width="940" height="557" alt="image" src="https://github.com/user-attachments/assets/90e9d738-e338-430d-8dbf-f6983f6a5036" />
+11. Click **Debug** and connect the **STM Nucleo Board**.
+    <img width="1080" height="608" alt="image" src="https://github.com/user-attachments/assets/f72fff44-6073-4ae4-aa78-0da455df9af1" />
 
-13. Click *Run* to execute the program.
+13. Click **Run** to execute the program.
     
 ---
 
-### 💻 *Program*
+### 💻 **Program**
 
 
-c
+```c
 #include "main.h"
 
 void SystemClock_Config(void);
@@ -96,14 +99,22 @@ int main(void)
 	      HAL_Delay(100);
     }
 }
-
+```
 ---
 ### OUTPUT
 CASE 1: LED ON 
-	![WhatsApp Image 2025-11-05 at 19 24 37_8bf0d766](https://github.com/user-attachments/assets/3c686f91-6327-42a2-9a66-7d355078d963)
+
+<img width="1280" height="832" alt="image" src="https://github.com/user-attachments/assets/062680f9-7dfb-4905-b3ae-54ce45b66651" />
+
 CASE 2: LED OFF
-	![WhatsApp Image 2025-11-05 at 19 24 50_b76f736e](https://github.com/user-attachments/assets/19de543b-4d9e-43f0-80bd-da715bb5c4a3)
+
+<img width="1280" height="832" alt="image" src="https://github.com/user-attachments/assets/db23e1fd-edb7-40f7-9bee-a8f80237f766" />
+
 ---
 ### RESULT
 
 The experiment on IR Sensor-Based Automatic LED Control using STM32 was successfully carried out. The STM32 microcontroller accurately read the IR sensor output and controlled the LED based on object detection. When an object was detected, the LED glowed (ON) and when no object was present, the LED remained OFF. Thus, the objective of the experiment was achieved.
+
+
+
+
